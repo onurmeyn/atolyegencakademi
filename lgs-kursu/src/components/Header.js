@@ -1,22 +1,38 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../assets/logo.svg';
 
 const Header = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
-      <img src={logo} alt="atölyegenç AKADEMİ" className="logo" />
-      <nav>
-        <ul>
-          <li><a href="#hakkimizda">Hakkımızda</a></li>
-          <li><a href="#programlar">Programlar</a></li>
-          <li><a href="#basarilarimiz">Başarılarımız</a></li>
-          <li><a href="#basari-hikayeleri">Başarı Hikayeleri</a></li>
-          <li><a href="#subeler">Şubeler</a></li>
-          <li><a href="#bursluluk-sinavi">Bursluluk Sınavı</a></li>
-        </ul>
-      </nav>
+    <header className={isSticky ? 'header sticky' : 'header'}>
+      <div className="header-content">
+        <img src={logo} alt="atölyegenç AKADEMİ" className="logo" />
+        <nav>
+          <a href="#hakkimizda">Hakkımızda</a>
+          <a href="#programlar">Programlar</a>
+          <a href="#basarilarimiz">Başarılarımız</a>
+          <a href="#basari-hikayeleri">Başarı Hikayeleri</a>
+          <a href="#subeler">Şubeler</a>
+        </nav>
+      </div>
     </header>
   );
 };

@@ -1,6 +1,6 @@
-
 import React from 'react';
 import './Branches.css';
+import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 
 const Branches = () => {
   const branches = [
@@ -37,18 +37,37 @@ const Branches = () => {
   ];
 
   return (
-    <section className="branches">
+    <section className="branches" id="subeler">
       <h2>Şubelerimiz</h2>
       <p>Size en yakın şubemizi ziyaret edin veya bizimle iletişime geçin.</p>
-      <ul>
+      <div className="branches-grid">
         {branches.map(branch => (
-          <li key={branch.name}>
+          <div className="branch-card" key={branch.name}>
             <h3>{branch.name}</h3>
-            <p>{branch.address}</p>
-            <p>{branch.phone}</p>
-          </li>
+            <div className="branch-info">
+              <FiMapPin className="icon" />
+              <p>{branch.address}</p>
+            </div>
+            <div className="branch-info">
+              <FiPhone className="icon" />
+              <p>{branch.phone}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
+      <div className="general-contact">
+        <h3>Genel İletişim</h3>
+        <div className="general-contact-info">
+          <div className="contact-item">
+            <FiMail className="icon" />
+            <p>atolyeelegitim@gmail.com</p>
+          </div>
+          <div className="contact-item">
+            <FiPhone className="icon" />
+            <p>+90 212 296 93 06</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

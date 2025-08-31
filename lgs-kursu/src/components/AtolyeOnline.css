@@ -28,6 +28,12 @@
   text-align: left;
 }
 
+.feature-card .icon {
+  color: #f76c27;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
 .feature-card h3 {
   font-size: 24px;
   margin-bottom: 20px;

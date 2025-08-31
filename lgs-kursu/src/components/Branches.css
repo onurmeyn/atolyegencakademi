@@ -1,25 +1,67 @@
-
 .branches {
-  padding: 40px;
+  background-color: #f76c27;
+  padding: 50px 0;
   text-align: center;
+  color: white;
 }
 
 .branches h2 {
-  font-size: 36px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.branches > p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.branch-card {
+  background-color: #334155;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left;
+}
+
+.branch-card h3 {
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
-.branches ul {
-  list-style: none;
-  padding: 0;
+.branch-info {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.branches li {
+.branch-info .icon {
+  margin-right: 15px;
+}
+
+.general-contact {
+  margin-top: 50px;
+}
+
+.general-contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.general-contact-info .contact-item {
+  display: flex;
+  align-items: center;
   margin: 0 20px;
-  font-size: 24px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 10px;
+}
+
+.general-contact-info .icon {
+  margin-right: 10px;
 }
