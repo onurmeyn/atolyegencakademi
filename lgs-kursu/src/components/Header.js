@@ -1,18 +1,20 @@
 
 import React from 'react';
 import './Header.css';
+import logo from '../assets/logo.svg';
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">atölyegençAKADEMİ</div>
+      <img src={logo} alt="atölyegenç AKADEMİ" className="logo" />
       <nav>
         <ul>
-          <li><a href="#">Hakkımızda</a></li>
-          <li><a href="#">Programlar</a></li>
-          <li><a href="#">Başarı Hikayeleri</a></li>
-          <li><a href="#">Şubeler</a></li>
-          <li><a href="#">Bursluluk Sınavı</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#programlar">Programlar</a></li>
+          <li><a href="#basarilarimiz">Başarılarımız</a></li>
+          <li><a href="#basari-hikayeleri">Başarı Hikayeleri</a></li>
+          <li><a href="#subeler">Şubeler</a></li>
+          <li><a href="#bursluluk-sinavi">Bursluluk Sınavı</a></li>
         </ul>
       </nav>
     </header>

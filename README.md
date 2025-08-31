@@ -1,1 +1,0 @@
-Atölye Genç Akademi Websitesi

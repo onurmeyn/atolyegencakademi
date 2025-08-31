@@ -1,6 +1,6 @@
 
 .hero {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ33h_2z92f_5z3gPAzT3ci2mIQO1fJ9MROgQ&s');
+    background-color: #f86624;
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -14,20 +14,31 @@
   .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  .hero-content h2 span {
+    font-weight: bold;
   }
   
   .hero-content p {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 30px;
   }
   
   .hero-content button {
-    background-color: #ff9900;
+    background-color: #333;
     color: white;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
   }
   
