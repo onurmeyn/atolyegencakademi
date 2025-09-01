@@ -1,0 +1,108 @@
+.branches {
+  background-color: #f76c27;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.branches h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.branches > p {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.branch-card {
+  background-color: #334155;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left;
+}
+
+.branch-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.branch-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.branch-info a,
+.general-contact-info .contact-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.branch-info .icon {
+  margin-right: 15px;
+}
+
+.general-contact {
+  margin-top: 50px;
+}
+
+.general-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.general-contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.general-contact-info .icon {
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .branches-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .general-contact-info {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .general-contact-info .contact-item {
+    margin: 0 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .branches-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
+
+@media (max-width: 768px) {
+    .branches > p {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+    .branches > p {
+    font-size: 28px;
+  }
+}
