@@ -1,0 +1,97 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pride-container {
+  background-color: #1e293b; /* Koyu Mavi/Siyah */
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pride-container::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1));
+  transform: rotate(15deg);
+  z-index: 1;
+}
+
+
+.pride-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.pride-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.pride-subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1; /* Açık Gri */
+  margin-bottom: 70px;
+}
+
+.pride-stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.pride-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-percentage-box {
+  background-color: transparent;
+  border: 2px solid #f76c27; /* Turuncu */
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.stat-percentage {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 1.75rem;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+}
+
+.stat-count {
+  font-size: 7rem;
+  font-weight: bold;
+  color: #f76c27; /* Turuncu */
+  line-height: 1;
+  text-shadow: 0 0 15px rgba(247, 108, 39, 0.5);
+}
+
+.stat-student {
+  font-size: 1.75rem;
+  color: #cbd5e1;
+  margin-top: 10px;
+}
