@@ -1,0 +1,133 @@
+.hall-of-fame-section {
+  background-color: #1a1a1a;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hall-of-fame-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hall-of-fame-title {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hall-of-fame-subtitle {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.students-grid-dark {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.student-card-dark {
+  background: #2c2c2c;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid #444;
+}
+
+.student-card-dark:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.student-image-container-dark {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.student-image-container-dark img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.student-card-dark:hover .student-image-container-dark img {
+  transform: scale(1.1);
+}
+
+.student-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+
+.student-card-dark:hover .student-card-overlay {
+  opacity: 1;
+}
+
+.student-info-dark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  text-align: left;
+  z-index: 2;
+}
+
+.student-name-dark {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 5px 0;
+}
+
+.student-school-dark {
+  font-size: 1rem;
+  color: #f86624;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .students-grid-dark {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hall-of-fame-title {
+    font-size: 2.5rem;
+  }
+  .hall-of-fame-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  .students-grid-dark {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hall-of-fame-title {
+    font-size: 2rem;
+  }
+  .student-name-dark {
+    font-size: 1.3rem;
+  }
+}

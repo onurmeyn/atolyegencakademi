@@ -1,90 +1,104 @@
-.testimonials {
-  background-color: #f76c27;
-  padding: 50px 0;
+.testimonial-section-dark {
+  background-color: #121212;
+  padding: 80px 0;
   text-align: center;
   color: white;
-}
-
-.testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.testimonials > p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-}
-
-.testimonials-wrapper {
   overflow: hidden;
-  width: 80%;
+}
+
+.testimonial-container-dark {
+  max-width: 1400px;
   margin: 0 auto;
-  position: relative;
 }
 
-.testimonials-container {
+.testimonial-title-dark {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.testimonial-subtitle-dark {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  margin-bottom: 4rem;
+}
+
+.testimonial-carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  width: max-content;
+  animation: scroll 40s linear infinite;
 }
 
-.testimonial-card {
-  background-color: #334155;
-  border-radius: 10px;
-  padding: 30px;
-  margin: 0 10px;
-  min-width: 48%;
-  box-sizing: border-box;
+.testimonial-card-dark {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 35px;
+  margin: 0 20px;
+  width: 400px;
+  flex-shrink: 0;
   text-align: left;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card-dark:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(248, 102, 36, 0.1);
+}
+
+.testimonial-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .stars {
-  color: #f76c27;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  color: #f86624;
+  font-size: 1.4rem;
 }
 
-.testimonial-text {
+.testimonial-text-dark {
   font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.7;
+  color: #c5c5c5;
+  font-style: italic;
+  margin-bottom: 25px;
 }
 
-.student-info {
-  display: flex;
-  align-items: center;
-}
-
-.student-details {
+.student-info-dark {
   display: flex;
   flex-direction: column;
 }
 
-.student-name {
+.student-name-dark {
   font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
 }
 
-.student-school {
+.student-school-dark {
   font-size: 0.9rem;
-  color: #ccc;
+  color: #a0a0a0;
 }
 
-.slider-arrows {
-  margin-top: 20px;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-440px * 5));
+  }
 }
 
-.arrow {
-  background-color: transparent;
-  border: 1px solid white;
-  color: white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  cursor: pointer;
-  margin: 0 10px;
-}
-
-.arrow:hover {
-  background-color: white;
-  color: #f76c27;
+@media (max-width: 768px) {
+  .testimonial-title-dark {
+    font-size: 2.5rem;
+  }
+  .testimonial-subtitle-dark {
+    font-size: 1.1rem;
+  }
+  .testimonial-carousel {
+    animation-duration: 35s;
+  }
 }

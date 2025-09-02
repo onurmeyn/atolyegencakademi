@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1>SIRADA SENİN BAŞARI<br />HİKAYEN VAR</h1>
         <h2>atölyegenç<span>AKADEMİ</span></h2>
-        <p>Atölye eğitim uzmanlığı ve kalitesi ile LGS sınavında en başarılı kurumda<br />sen de yerini al!</p>
+         <p>Atölye eğitim uzmanlığı ve kalitesi ile LGS sınavında en başarılı kurumda sen de yerini al!</p>
         <button>Programlarımızı Keşfedin</button>
       </div>
     </section>

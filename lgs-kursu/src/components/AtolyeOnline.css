@@ -1,45 +1,121 @@
-.atolye-online {
-  background-color: #f86624;
-  padding: 80px 40px;
+.atolye-online-dark {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 80px 20px;
   text-align: center;
-  color: white;
 }
 
-.atolye-online-content h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.atolye-online-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.atolye-online-content > p {
-  font-size: 18px;
-  margin-bottom: 40px;
+.atolye-online-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.features-grid {
+.atolye-online-title .heading-icon {
+  color: #f86624;
+}
+
+.atolye-online-title span {
+  color: #f86624;
+}
+
+.atolye-online-subtitle {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-grid-dark {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.feature-card {
-  background-color: #323e48;
-  padding: 40px;
-  border-radius: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   text-align: left;
 }
 
-.feature-card .icon {
-  color: #f76c27;
-  font-size: 3rem;
+.feature-card-dark {
+  background: #2c2c2c;
+  padding: 35px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card-dark:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+  border-color: #f86624;
+}
+
+.feature-card-dark .icon {
+  color: #f86624;
+  font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
-.feature-card h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.feature-card-dark h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #fff;
 }
 
-.feature-card p {
-  font-size: 16px;
+.feature-card-dark p {
+  font-size: 1rem;
   line-height: 1.6;
+  color: #a0a0a0;
+}
+
+@media (max-width: 992px) {
+  .atolye-online-title {
+    font-size: 2.8rem;
+  }
+  .atolye-online-subtitle {
+    font-size: 1.1rem;
+  }
+  .features-grid-dark {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .atolye-online-dark {
+    padding: 60px 20px;
+  }
+  .atolye-online-title {
+    font-size: 2.5rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .atolye-online-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  .features-grid-dark {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .feature-card-dark {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .atolye-online-title {
+    font-size: 2rem;
+  }
+  .feature-card-dark h3 {
+    font-size: 1.3rem;
+  }
 }

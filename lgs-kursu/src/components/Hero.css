@@ -1,44 +1,106 @@
-
 .hero {
-    background-color: #f86624;
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-  
+  background-color: #f86624;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-content h2 {
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content h2 span {
+  font-weight: 900;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-content button {
+  background-color: #333;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
   .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 3.5rem;
+  }
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px;
+    min-height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
   }
 
   .hero-content h2 {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
   }
 
-  .hero-content h2 span {
-    font-weight: bold;
-  }
-  
   .hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 1rem;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 15px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.1rem;
+  }
+
   .hero-content button {
-    background-color: #333;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 0.9rem;
   }
-  
+}

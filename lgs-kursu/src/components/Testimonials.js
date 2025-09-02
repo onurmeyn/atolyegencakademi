@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Testimonials.css';
 
 const testimonialsData = [
@@ -23,43 +23,42 @@ const testimonialsData = [
     name: 'Zeynep Yılmaz',
     school: "Cağaloğlu Anadolu Lisesi - %0.30'luk Dilim",
   },
+    {
+    id: 4,
+    stars: 5,
+    text: '"Deneme sınavlarının zorluk seviyesi ve analizleri, gerçek sınavda ne yapmam gerektiğini anlamamı sağladı. Atölye\'nin stratejileri paha biçilmez."',
+    name: 'Ayşe Kaya',
+    school: "Kabataş Erkek Lisesi - %0.40'lık Dilim",
+  },
+  {
+    id: 5,
+    stars: 5,
+    text: '"Sadece akademik değil, motivasyon ve rehberlik anlamında da her zaman yanımdaydılar. Başarımda emeği geçen herkese minnettarım."',
+    name: 'Mustafa Demir',
+    school: "İzmir Fen Lisesi - %0.55'lik Dilim",
+  },
 ];
 
 const Testimonials = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const nextTestimonial = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === testimonialsData.length - 2 ? 0 : prevIndex + 1));
-    };
-
-    const prevTestimonial = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonialsData.length - 2 : prevIndex - 1));
-    };
-
-
   return (
-    <section className="testimonials" id="basari-hikayeleri">
-      <h2>Mezunlarımızdan Dinleyin</h2>
-      <p>Öğrencilerimizin başarı hikayeleri, en büyük gurur kaynağımız.</p>
-      <div className="testimonials-wrapper">
-        <div className="testimonials-container" style={{ transform: `translateX(-${currentIndex * 50}%)` }}>
-            {testimonialsData.map((testimonial) => (
-            <div className="testimonial-card" key={testimonial.id}>
+    <section className="testimonial-section-dark" id="basari-hikayeleri">
+      <div className="testimonial-container-dark">
+        <h2 className="testimonial-title-dark">Mezunlarımızdan Dinleyin</h2>
+        <p className="testimonial-subtitle-dark">Öğrencilerimizin başarı hikayeleri, en büyük ilham kaynağımız.</p>
+        <div className="testimonial-carousel">
+          {testimonialsData.map((testimonial) => (
+            <div className="testimonial-card-dark" key={testimonial.id}>
+              <div className="testimonial-card-header">
                 <div className="stars">{'★'.repeat(testimonial.stars)}</div>
-                <p className="testimonial-text">{testimonial.text}</p>
-                <div className="student-info">
-                  <div className="student-details">
-                      <span className="student-name">{testimonial.name}</span>
-                      <span className="student-school">{testimonial.school}</span>
-                  </div>
-                </div>
+              </div>
+              <p className="testimonial-text-dark">{testimonial.text}</p>
+              <div className="student-info-dark">
+                <span className="student-name-dark">{testimonial.name}</span>
+                <span className="student-school-dark">{testimonial.school}</span>
+              </div>
             </div>
-            ))}
+          ))}
         </div>
-      </div>
-      <div className="slider-arrows">
-        <button className="arrow left" onClick={prevTestimonial}>‹</button>
-        <button className="arrow right" onClick={nextTestimonial}>›</button>
       </div>
     </section>
   );

@@ -1,97 +1,146 @@
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.pride-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.pride-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .pride-container {
-  background-color: #1e293b; /* Koyu Mavi/Siyah */
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.pride-container::before {
-  content: '';
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1));
-  transform: rotate(15deg);
-  z-index: 1;
-}
-
-
-.pride-content {
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1s ease-out forwards;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .pride-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  color: white;
+  font-size: 3.2rem;
+  color: #333;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .pride-subtitle {
-  font-size: 1.25rem;
-  color: #cbd5e1; /* Açık Gri */
-  margin-bottom: 70px;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.pride-stats {
+.pride-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.pride-stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  padding: 30px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 80px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  border-top: 4px solid #f86624;
 }
 
-.pride-stat-item {
+.pride-stat-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.stat-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stat-percentage {
+  color: #f86624;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: rgba(248, 102, 36, 0.1);
+  padding: 8px 20px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.stat-label {
+  font-size: 1.5rem;
+  color: #555;
+  display: block;
+  margin-top: 10px;
+}
+
+.stat-body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.stat-percentage-box {
-  background-color: transparent;
-  border: 2px solid #f76c27; /* Turuncu */
-  padding: 10px 25px;
-  border-radius: 50px;
-  margin-bottom: 20px;
-}
-
-.stat-percentage {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.stat-label {
-  font-size: 1.75rem;
-  color: #cbd5e1;
-  margin-bottom: 15px;
-}
-
 .stat-count {
-  font-size: 7rem;
-  font-weight: bold;
-  color: #f76c27; /* Turuncu */
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #333;
   line-height: 1;
-  text-shadow: 0 0 15px rgba(247, 108, 39, 0.5);
 }
 
 .stat-student {
-  font-size: 1.75rem;
-  color: #cbd5e1;
-  margin-top: 10px;
+  font-size: 1.6rem;
+  color: #666;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .pride-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .pride-title {
+    font-size: 2.8rem;
+  }
+  .pride-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  .stat-count {
+    font-size: 5rem;
+  }
+  .stat-label, .stat-student {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pride-section {
+    padding: 60px 20px;
+  }
+  .pride-title {
+    font-size: 2.2rem;
+  }
+  .pride-subtitle {
+    font-size: 1rem;
+  }
+  .pride-stat-card {
+    padding: 25px;
+  }
+  .stat-count {
+    font-size: 4.5rem;
+  }
+  .stat-percentage {
+    font-size: 1.1rem;
+  }
 }

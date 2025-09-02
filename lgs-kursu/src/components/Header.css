@@ -1,8 +1,12 @@
+
 .header {
-  background: linear-gradient(to right, #ff8a50, #f76c27);
-  padding: 15px 0;
+  background-color: #f86624;
+  padding: 10px 0;
   transition: all 0.3s ease-in-out;
-  z-index: 100;
+  z-index: 1000;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .header.sticky {
@@ -10,12 +14,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to right, #ff8a50, #f76c27);
+  background-color: #f86624;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -24,6 +28,22 @@
 
 .logo {
   height: 50px;
+  position: relative;
+  width: 250px;
+}
+
+.logo img {
+  height: 180px;
+  width: auto;
+  position: absolute;
+  top: -65px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -31,4 +51,64 @@ nav a {
   text-decoration: none;
   color: white;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f0f0f0;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 992px) {
+  .logo {
+    width: 200px;
+  }
+  .logo img {
+    height: 140px;
+    top: -45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 120px;
+    top: -35px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(248, 102, 36, 0.95);
+    transition: left 0.5s ease;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links.open {
+    left: 0;
+  }
+
+  nav a {
+    margin: 20px 0;
+    font-size: 24px;
+    color: white;
+  }
+
+  .menu-icon {
+    display: block;
+  }
 }

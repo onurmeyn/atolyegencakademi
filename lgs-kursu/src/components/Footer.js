@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import logo from '../assets/logo.svg';
-import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
+import logo from '../assets/logo-white.svg';
+import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-about">
           <img src={logo} alt="atölyegenç AKADEMİ" className="logo" />
-          <p>Geleceğin liderlerini bugünden yetiştiriyoruz.</p>
+          <p>Başarı hikayeni yaz!</p>
         </div>
         <div className="footer-links">
           <h3>Hızlı Erişim</h3>
@@ -21,12 +21,16 @@ const Footer = () => {
             <li><a href="#subeler">Şubeler</a></li>
           </ul>
         </div>
+        <div className="footer-contact">
+          <h3>İletişim</h3>
+          <p>Adres: Matbuat Sokak no 13 gazeteciler sitesi Esentepe Şişli İstanbul</p>
+          <p>Telefon: (0212) 296 93 06</p>
+          <p>E-posta: info@atolyeegitim.com</p>
+        </div>
         <div className="footer-social">
           <h3>Sosyal Medya</h3>
           <div className="footer-social-icons">
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaTwitter /></a>
+            <a href="https://www.instagram.com/atolyegencakademi" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
           </div>
         </div>
       </div>
