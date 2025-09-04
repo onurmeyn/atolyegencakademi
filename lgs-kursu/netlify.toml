@@ -1,0 +1,12 @@
+# Netlify configuration file
+
+[build]
+  # Directory to change to before starting a build.
+  base = "lgs-kursu"
+  # The command to build your site
+  command = "npm install && npm run build"
+  # The directory to publish (relative to the base directory)
+  publish = "build"
+
+[dev]
+  command = "npm start" # Command to start your dev server
