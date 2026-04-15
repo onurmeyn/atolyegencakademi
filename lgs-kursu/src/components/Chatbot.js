@@ -88,7 +88,7 @@ const Chatbot = () => {
         },
         {
             question: `Şubeleriniz nerede?`,
-            answer: `İstanbul\'da Bakırköy, Bahçeşehir, Esentepe, Ataşehir, Çekmeköy ve Atakent\'te şubelerimiz bulunmaktadır. Detaylı adres ve iletişim bilgileri aşağıdadır:\n\n${branchInfo}`,
+            answer: `İstanbul'da Bakırköy, Bahçeşehir, Esentepe, Ataşehir, Çekmeköy ve Atakent'te şubelerimiz bulunmaktadır. Detaylı adres ve iletişim bilgileri aşağıdadır:\n\n${branchInfo}`,
         },
         {
             question: 'İletişim, bilgi veya ücretler hakkında nasıl bilgi alabilirim?',
