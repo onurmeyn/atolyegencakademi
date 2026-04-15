@@ -28,7 +28,7 @@ Genel akış:
 2. Değişiklikler ilgili branch'e commit/push edilir.
 3. Canlıya bağlı platform (ör. Netlify) yeni deploy başlatırsa, o zaman site güncellenir.
 
-Bu projede Netlify ayarı `lgs-kursu/netlify.toml` dosyasındadır ve build işlemi `lgs-kursu` klasöründen alınacak şekilde yapılandırılmıştır.
+Bu projede Netlify için kök dizinde `netlify.toml` dosyası bulunur. Build komutu `npm run build`, publish klasörü `build` olarak ayarlıdır. Kök build scripti, önce `lgs-kursu` bağımlılıklarını kurar, ardından derleme çıktısını kök `build/` klasörüne kopyalar.
 
 ## Not
 

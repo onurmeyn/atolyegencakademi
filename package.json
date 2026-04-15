@@ -5,7 +5,7 @@
   "description": "Workspace launcher for the lgs-kursu React app",
   "scripts": {
     "start": "npm --prefix lgs-kursu run start",
-    "build": "npm --prefix lgs-kursu run build",
+    "build": "npm --prefix lgs-kursu ci && npm --prefix lgs-kursu run build && rm -rf build && cp -r lgs-kursu/build build",
     "test": "npm --prefix lgs-kursu run test",
     "eject": "npm --prefix lgs-kursu run eject"
   }
