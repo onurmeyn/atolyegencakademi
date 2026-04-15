@@ -17,13 +17,15 @@ const Bursluluk = () => {
       { threshold: 0.3 }
     );
 
-    if (burslulukRef.current) {
-      observer.observe(burslulukRef.current);
+    const sectionEl = burslulukRef.current;
+
+    if (sectionEl) {
+      observer.observe(sectionEl);
     }
 
     return () => {
-      if (burslulukRef.current) {
-        observer.unobserve(burslulukRef.current);
+      if (sectionEl) {
+        observer.unobserve(sectionEl);
       }
     };
   }, []);
